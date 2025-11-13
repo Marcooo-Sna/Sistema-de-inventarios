@@ -25,19 +25,22 @@ public class Test {
         public static double cantidadpedido(double k, double d, double h){
             return Math.sqrt((2, k * d) / h) ;
         }
-        //metodo para calcular la direccion del ciclo
+        //metodo para calcular la direccion del ciclo.
         public static double duracionciclo (double y, double d){
             return y / d;
         }
-        //metodo para calcular N
+        //metodo para calcular N.
         public static double N(double l, double to){
             return l / to;
         }
-        //metodo para Le 
+        //metodo para Le.
         public static double Le(double l, double n, double to){
             return l - n * to;
         }
-        
+        //metodo para calcular el punto de reorden.
+        public static double puntodereorden(double le, double d){
+            return le * d;
+        }
 
 
      }
