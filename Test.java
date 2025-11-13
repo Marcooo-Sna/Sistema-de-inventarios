@@ -21,14 +21,17 @@ public class Test {
         System.out.println("Le:" + Le(l, N(l, duracionciclo(cantidadpedido(k, d, h), d)), duracionciclo(cantidadpedido(k, d, h), d)));
         System.out.println("Punto de reorden" + puntodereorden(Le(l, N(l, DuracionCiclo(cantidadpedido(k, d, h), d)), duracionciclo(cantidadpedido(k, d, h), d)), d));
 
-        //1er metodo para calcular la cantidad de pedido.
+        //metodo para calcular la cantidad de pedido.
         public static double cantidadpedido(double k, double d, double h) {
             return Math.sqrt((2, k * d) / h) ;
         }
-        //2do metodo para calcular la direccion del ciclo
-
+        //metodo para calcular la direccion del ciclo
         public static double duracionciclo (double y, double d) {
             return y / d;
+        }
+        //metodo para calcular N
+        public static double N(double l, double to){
+            return l / to;
         }
 
 
