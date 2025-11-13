@@ -41,6 +41,5 @@ public class Test {
         public static double puntodereorden(double le, double d){
             return le * d;
         }
-
     }
 }
