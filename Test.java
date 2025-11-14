@@ -53,7 +53,16 @@ public class Test {
         double mejorcosto = costototalnormal();
         double qmejor = qoptima;
         String mejoropcion = "Precio normal";
-        
+        if(costototaldescuento1 < mejorcosto){
+            mejorcosto = costototaldescuento1;
+            qmejor = qdescuento1 >= rangominimodescuento1 ? qdescuento1 : rangominimodescuento1;
+            mejoropcion = "Descuento No. 1";
+        }
+        if (costototaldescuento2 < mejorcosto){
+            mejorcosto = costototaldescuento2;
+            qmejor = qdescuento2 >= rangominimodescuento2 ? qdescuento2 : rangominimodescuento2;
+            mejoropcion = "Descuento No. 2";
+        }
         //metodo para calcular la cantidad de pedido.
         public static double cantidadpedido(double k, double d, double h){
             return Math.sqrt((2, k * d) / h) ;
