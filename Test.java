@@ -49,7 +49,8 @@ public class Test {
         } else {
             costototaldescuento2 = calcularcostototal(rangominimodescuento2, k, d, h, preciodescuento2)
         }
-        //se muestran los costos totales y evaluamos cual nos conviene más. (Empezo a sonar mi mas personal de Taylor swift!!!!!!!!!!!!)
+
+        // Comparacion de costos totales.
         double mejorcosto = costototalnormal();
         double qmejor = qoptima;
         String mejoropcion = "Precio normal";
@@ -66,7 +67,11 @@ public class Test {
         System.out.println("Mejor cantidad de pedido: " + qmejor );
         System.out.println("Mejor costo total: " + mejorcosto);
         System.out.println("Mejor opcion de descuento: " + mejoropcion);
-        
+
+        //calculamos el COSTO TOTAL UNITARIO (CTU).
+        double costototalunitario = calcularcostototalunitario(mejorcosto, d);
+        System.out.println("El costo total unitario es: " + costototalunitario);
+    }
         //metodo para calcular la cantidad de pedido.
         public static double cantidadpedido(double k, double d, double h){
             return Math.sqrt((2, k * d) / h) ;
