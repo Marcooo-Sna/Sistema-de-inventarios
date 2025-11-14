@@ -34,6 +34,13 @@ public class Test {
         System.out.println("Le:" + Le(l, N(l, duracionciclo(cantidadpedido(k, d, h), d)), duracionciclo(cantidadpedido(k, d, h), d)));
         System.out.println("Punto de reorden" + puntodereorden(Le(l, N(l, DuracionCiclo(cantidadpedido(k, d, h), d)), duracionciclo(cantidadpedido(k, d, h), d)), d));
 
+        //Calculo para inventarios con desceunto.
+        double qoptima = cantidadpedido ( k, d, h);
+        double costototalnormal = calcularcostototal(qoptima, k, d, h, precionormal);
+        double qdescuento1 = cantidadpedido (k, d, h, preciodescuento1);
+        double costototaldesuento1 = 0;
+        
+
         //metodo para calcular la cantidad de pedido.
         public static double cantidadpedido(double k, double d, double h){
             return Math.sqrt((2, k * d) / h) ;
