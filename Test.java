@@ -49,7 +49,7 @@ public class Test {
         } else {
             costototaldescuento2 = calcularcostototal(rangominimodescuento2, k, d, h, preciodescuento2)
         }
-        //se muestran los costos totales y evaluamos cual nos conviene más:
+        //se muestran los costos totales y evaluamos cual nos conviene más. (Empezo a sonar mi mas personal de Taylor swift!!!!!!!!!!!!)
         double mejorcosto = costototalnormal();
         double qmejor = qoptima;
         String mejoropcion = "Precio normal";
@@ -63,6 +63,10 @@ public class Test {
             qmejor = qdescuento2 >= rangominimodescuento2 ? qdescuento2 : rangominimodescuento2;
             mejoropcion = "Descuento No. 2";
         }
+        System.out.println("Mejor cantidad de pedido: " + qmejor );
+        System.out.println("Mejor costo total: " + mejorcosto);
+        System.out.println("Mejor opcion de descuento: " + mejoropcion);
+        
         //metodo para calcular la cantidad de pedido.
         public static double cantidadpedido(double k, double d, double h){
             return Math.sqrt((2, k * d) / h) ;
