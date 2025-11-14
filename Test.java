@@ -26,7 +26,6 @@ public class Test {
         System.out.println("Ingrese el rango minimo para el 2do descuento:");
         double rangominimodescuento2 = lector.nextDouble();
 
-
         //Se muestran los resultados.
         System.out.println("La cantidad de pedido es: " + cantidadpedido(k, d, h));
         System.out.println("Duración del ciclo" + duracionciclo + (cantidadpedido(k, d, h), d));
@@ -38,9 +37,19 @@ public class Test {
         double qoptima = cantidadpedido ( k, d, h);
         double costototalnormal = calcularcostototal(qoptima, k, d, h, precionormal);
         double qdescuento1 = cantidadpedido (k, d, h, preciodescuento1);
-        double costototaldesuento1 = 0;
-        
-
+        double costototaldescuento1 = 0;
+        if (qdescuento1 >= rangominimodescuento1){
+            costototaldescuento1 = calcularcostototal(qdescuento1, k, d, h, preciodescuento1);
+        } else {
+            costototaldescuento1 = calcularcostototal(rangominimodescuento1, k, d, h, preciodescuento1);
+        }
+        double qdescuento2 = cantidadpedidocondescuento (k, d, h, preciodescuento2);
+        double costototaldescuento2 = 0;
+        if(qdescuento2 >= rangominimodescuento2){
+            costototaldescuento2 = calcularcostototal(qdescuento2, k, d, h, preciodescuento2);
+        } else {
+            costototaldescuento2 = calcularcostototal(rangominimodescuento2, k, d, h, preciodescuento2)
+        }
         //metodo para calcular la cantidad de pedido.
         public static double cantidadpedido(double k, double d, double h){
             return Math.sqrt((2, k * d) / h) ;
