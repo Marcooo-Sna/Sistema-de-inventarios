@@ -76,11 +76,11 @@ public class Test {
         public static double cantidadpedido(double k, double d, double h){
             return Math.sqrt((2, k * d) / h) ;
         }
-        //metodo para calcular la direccion del ciclo.
+        //metodo para calcular la duracion del ciclo.
         public static double duracionciclo (double y, double d){
             return y / d;
         }
-        //metodo para calcular N.
+        //metodo para calcular n.
         public static double N(double l, double to){
             return l / to;
         }
@@ -91,6 +91,17 @@ public class Test {
         //metodo para calcular el punto de reorden.
         public static double puntodereorden(double le, double d){
             return le * d;
+        }
+        //metodo para calcular la cantidad con descuento.
+        public static double cantidadpedidocondescuento(double k, double d, double h, double p){
+            return Math.sqrt((2 * k * d) / (h * p));
+        }
+        //metodo para calcular la costo total de mujerts.
+        public static double calcularcostototal(double q, double k, double d, double h, double p){
+            double costodeorden = (d / q) * k;
+            double costodemantenimiento = (q / 2) * h * p;
+            double costodecompras = d * p;
+            return costodeorden + costodemantenimiento + costodecompras;
         }
     }
 }
