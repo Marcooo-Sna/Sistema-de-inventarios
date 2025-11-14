@@ -27,10 +27,10 @@ public class Test {
 
         //Se muestran los resultados.
         System.out.println("La cantidad de pedido es: " + cantidadpedido(k, d, h));
-        System.out.println("Duración del ciclo" + duracionciclo + (cantidadpedido(k, d, h), d));
+        System.out.println("Duración del ciclo" + d + (cantidadpedido(k, d, h), d));
         System.out.println(":" + N(l,duracionciclo(cantidadpedido(d, d, h), d)));
         System.out.println("Le:" + Le(l, N(l, duracionciclo(cantidadpedido(k, d, h), d)), duracionciclo(cantidadpedido(k, d, h), d)));
-        System.out.println("Punto de reorden" + puntodereorden(Le(l, N(l, DuracionCiclo(cantidadpedido(k, d, h), d)), duracionciclo(cantidadpedido(k, d, h), d)), d));
+        System.out.println("Punto de reorden" + puntodereorden(Le(l, N(l, duracionciclo(cantidadpedido(k, d, h), d)), duracionciclo(cantidadpedido(k, d, h), d)), d));
 
         //Calculo para inventarios con desceunto.
         double qoptima = cantidadpedido ( k, d, h);
@@ -103,5 +103,9 @@ public class Test {
             double costodecompras = d * p;
             return costodeorden + costodemantenimiento + costodecompras;
         }
+        //metodo para calcular el costo total unitario:
+        public static double calcularcostototalunitario(double ctu, double d){
+            return ctu / d;
+        }
     }
-}
+
