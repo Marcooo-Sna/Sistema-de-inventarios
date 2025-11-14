@@ -23,6 +23,8 @@ public class Test {
         double rangominimodescuento1 = lector.nextDouble();
         System.out.println("Ingrese el precio con el 2do descuento:");
         double preciodescuento2 = lector.nextDouble();
+        System.out.println("Ingrese el rango minimo para el 2do descuento:");
+        double rangominimodescuento2 = lector.nextDouble();
 
 
         //Se muestran los resultados.
