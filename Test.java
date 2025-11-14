@@ -14,6 +14,17 @@ public class Test {
         System.out.println("Ingrese el valor de l:"):
         double l = lector.nextDouble();
 
+        //Datos para inventarios con descuento
+        System.out.println("Ingrese el precio normal: ");
+        double precionormal = lector.nextDouble();
+        System.out.println("Ingrese el precio con el 1er descuento:");
+        double preciodescuento1 = lector.nextDouble();
+        System.out.println("Ingrese el rango minimo para el 1er descuento: ");
+        double rangominimodescuento1 = lector.nextDouble();
+        System.out.println("Ingrese el precio con el 2do descuento:");
+        double preciodescuento2 = lector.nextDouble();
+
+
         //Se muestran los resultados.
         System.out.println("La cantidad de pedido es: " + cantidadpedido(k, d, h));
         System.out.println("Duración del ciclo" + duracionciclo + (cantidadpedido(k, d, h), d));
