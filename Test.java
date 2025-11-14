@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-
         //Le pido los datos al usuario.
         Scanner lector = new Scanner(System.in);
         System.out.println("Ingrese el valor de K:"):
@@ -50,6 +49,11 @@ public class Test {
         } else {
             costototaldescuento2 = calcularcostototal(rangominimodescuento2, k, d, h, preciodescuento2)
         }
+        //se muestran los costos totales y evaluamos cual nos conviene más:
+        double mejorcosto = costototalnormal();
+        double qmejor = qoptima;
+        String mejoropcion = "Precio normal";
+        
         //metodo para calcular la cantidad de pedido.
         public static double cantidadpedido(double k, double d, double h){
             return Math.sqrt((2, k * d) / h) ;
